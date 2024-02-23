@@ -40,7 +40,7 @@ public class StudentRepository {
             while (rs.next()) {
                 long id = rs.getLong("id");
                 String name = rs.getString("name");
-                String surname = rs.getString("surname");
+                String surname = rs.getString("surname");// тоже в маппер можно переместить
                 SubjectListResponse allByStudent = subjectRepository.findAllByStudent(id);
                 list.add(new StudentResponse(id, name, surname, allByStudent));
             }
